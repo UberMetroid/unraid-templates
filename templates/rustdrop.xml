@@ -48,5 +48,7 @@
 
   <Config Name="Allowed Extensions" Target="ALLOWED_EXTENSIONS" Default="" Description="Comma-separated list of allowed file extensions (e.g. pdf,png,zip). Leave empty to allow all." Type="Variable" Display="always" Required="false" Mask="false"></Config>
 
+  <Config Name="Base URL" Target="BASE_URL" Default="http://localhost:4401/" Description="Application base URL (highly recommended to set if using a reverse proxy to ensure download links are built correctly)." Type="Variable" Display="always" Required="false" Mask="false">http://localhost:4401/</Config>
+
   <Config Name="Timezone" Target="TZ" Default="UTC" Description="Timezone for the container logs." Type="Variable" Display="advanced" Required="false" Mask="false">UTC</Config>
 </Container>

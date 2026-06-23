@@ -37,5 +37,7 @@
 
   <Config Name="Highlight Languages" Target="HIGHLIGHT_LANGUAGES" Default="" Description="Comma-separated list of programming language codes for syntax highlight choices (e.g. rust,javascript,python). Leave empty for all standard languages." Type="Variable" Display="always" Required="false" Mask="false"></Config>
 
+  <Config Name="Base URL" Target="BASE_URL" Default="http://localhost:4402" Description="Application base URL (highly recommended to set if using a reverse proxy to ensure websocket origins can connect correctly)." Type="Variable" Display="always" Required="false" Mask="false">http://localhost:4402</Config>
+
   <Config Name="Timezone" Target="TZ" Default="UTC" Description="Timezone for the container logs." Type="Variable" Display="advanced" Required="false" Mask="false">UTC</Config>
 </Container>

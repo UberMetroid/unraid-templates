@@ -36,5 +36,6 @@
   <Config Name="Access PIN" Target="RUSTDO_PIN" Default="" Description="Optional cryptographic access PIN to secure the board (leave empty for public mode)." Type="Variable" Display="always" Required="false" Mask="true"></Config>
   
   <Config Name="Site Title" Target="RUSTDO_TITLE" Default="RustDo" Description="Custom website title rendered in the navigation header." Type="Variable" Display="always" Required="false" Mask="false">RustDo</Config>
+  <Config Name="Allowed Origins" Target="ALLOWED_ORIGINS" Default="*" Description="Comma-separated list of allowed HTTP request origins (CORS). Use '*' to allow all origins." Type="Variable" Display="always" Required="false" Mask="false">*</Config>
   <Config Name="Timezone" Target="TZ" Default="UTC" Description="Timezone for the container logs." Type="Variable" Display="advanced" Required="false" Mask="false">UTC</Config>
 </Container>
