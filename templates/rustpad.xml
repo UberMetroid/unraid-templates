@@ -14,7 +14,6 @@
     
     Key Features:
     - Real-time synchronization of notes across users.
-    - Syntactical highlight option for various coding languages.
     - Optional security access locking using a PIN.
   </Overview>
   <Category>Productivity:Office;Tools:Utilities;</Category>
@@ -23,7 +22,6 @@
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/rustpad.xml</TemplateURL>
   <Config Name="WebUI Port" Target="4402" Default="4402" Mode="tcp" Description="The main web interface port." Type="Port" Display="always" Required="true" Mask="false">4402</Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/rustpad" Mode="rw" Description="Persistent storage for notepad database files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rustpad</Config>
-  <Config Name="Highlight Languages" Target="HIGHLIGHT_LANGUAGES" Default="" Description="Comma-separated list of programming language codes for syntax highlight choices (e.g. rust,javascript,python). Leave empty for all standard languages." Type="Variable" Display="always" Required="false" Mask="false" />
   <Config Name="Access PIN" Target="RUSTPAD_PIN" Default="" Description="Optional numerical PIN to lock access to the rustpad interface (leave empty for public mode)." Type="Variable" Display="always" Required="false" Mask="true" />
   <Config Name="Site Title" Target="SITE_TITLE" Default="Rustpad" Description="Custom website title rendered in the navigation header or browser tab." Type="Variable" Display="always" Required="false" Mask="false">Rustpad</Config>
   <Config Name="Base URL" Target="BASE_URL" Default="http://localhost:4402" Description="Application base URL. Highly recommended to set if using a reverse proxy to ensure redirect and socket links are generated correctly." Type="Variable" Display="always" Required="false" Mask="false">http://localhost:4402</Config>
