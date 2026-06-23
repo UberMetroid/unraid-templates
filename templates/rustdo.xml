@@ -3,26 +3,42 @@
   <Name>RustDo</Name>
   <Repository>ghcr.io/ubermetroid/rustdo:latest</Repository>
   <Registry>https://github.com/UberMetroid/RustDo/pkgs/container/rustdo</Registry>
-  <Github>https://github.com/UberMetroid/RustDo</Github>
+  
   <Network>bridge</Network>
   <Privileged>false</Privileged>
+  <Shell>sh</Shell>
+  <ExtraParams>--restart unless-stopped --log-opt max-size=50m</ExtraParams>
+
+  <Support>https://github.com/UberMetroid/RustDo/issues</Support>
+  <Project>https://github.com/UberMetroid/RustDo</Project>
   <Overview>
-    RustDo is a clean, secure, and minimalist ToDo list application built in Rust with Yew and Axum. It runs out-of-the-box on Unraid.
+    RustDo is a clean, secure, and minimalist ToDo list application built in Rust with Yew and Axum.&#xD;
+    &#xD;
+    Key Features:&#xD;
+    - High performance and tiny resource footprint.&#xD;
+    - Dynamic color themes (Light, Dark, Nord, Dracula, Sepia).&#xD;
+    - Multilingual interface support.&#xD;
+    - Optional access PIN encryption for privacy.&#xD;
+    - Single-list mode capability for simplified task management.
   </Overview>
-  <Category>Productivity:Tools Tools:Utilities</Category>
+  <Category>Productivity:Tools;Tools:Utilities;</Category>
   <WebUI>http://[IP]:[PORT:4403]/</WebUI>
   <Icon>https://raw.githubusercontent.com/UberMetroid/RustDo/main/frontend/Assets/favicon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/rustdo.xml</TemplateURL>
+  <Requires>If you lock the application with a PIN, it is recommended to set a strong PIN and back up your data directory.</Requires>
   
   <!-- Port Mapping -->
-  <Config Name="Host Port" Target="4403" Default="4403" Mode="tcp" Description="Container Port 4403" Type="Port" Display="always" Required="true" Mask="false">4403</Config>
+  <Config Name="WebUI Port" Target="4403" Default="4403" Mode="tcp" Description="The main web interface port." Type="Port" Display="always" Required="true" Mask="false">4403</Config>
   
   <!-- Path Mapping -->
-  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/rustdo" Mode="rw" Description="Location to store persistent todo lists" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rustdo</Config>
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/rustdo" Mode="rw" Description="Persistent storage for your todo lists." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rustdo</Config>
   
   <!-- Variables -->
-  <Config Name="Access PIN" Target="RUSTDO_PIN" Default="" Description="Optional cryptographic access PIN to lock the application. Leave empty for public/no-auth mode." Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="Access PIN" Target="RUSTDO_PIN" Default="" Description="Optional cryptographic access PIN to secure the board (leave empty for public mode)." Type="Variable" Display="always" Required="false" Mask="true"></Config>
   
-  <Config Name="Site Title" Target="RUSTDO_TITLE" Default="RustDo" Description="Custom website title rendered in header." Type="Variable" Display="always" Required="false" Mask="false">RustDo</Config>
+  <Config Name="Site Title" Target="RUSTDO_TITLE" Default="RustDo" Description="Custom website title rendered in the navigation header." Type="Variable" Display="always" Required="false" Mask="false">RustDo</Config>
   
   <Config Name="Single List Mode" Target="SINGLE_LIST" Default="false" Description="Set to 'true' to restrict the application to a single task list, hiding the list sidebar." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+
+  <Config Name="Timezone" Target="TZ" Default="UTC" Description="Timezone for the container logs." Type="Variable" Display="advanced" Required="false" Mask="false">UTC</Config>
 </Container>
