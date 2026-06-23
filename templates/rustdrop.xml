@@ -45,6 +45,10 @@
   <Config Name="Max Storage Limit" Target="MAX_STORAGE_LIMIT_GB" Default="100" Description="Combined maximum total storage limit for all uploaded files (in GB)." Type="Variable" Display="always" Required="false" Mask="false">100</Config>
 
   <Config Name="Retention Period Days" Target="RETENTION_PERIOD_DAYS" Default="30" Description="Number of days to store uploaded files before automatically purging them." Type="Variable" Display="always" Required="false" Mask="false">30</Config>
+  
+  <Config Name="Apprise URL" Target="APPRISE_URL" Default="" Description="Apprise/Discord webhook URL to send upload notifications." Type="Variable" Display="always" Required="false" Mask="true"></Config>
+
+  <Config Name="Allowed Extensions" Target="ALLOWED_EXTENSIONS" Default="" Description="Comma-separated list of allowed file extensions (e.g. pdf,png,zip). Leave empty to allow all." Type="Variable" Display="always" Required="false" Mask="false"></Config>
 
   <Config Name="Timezone" Target="TZ" Default="UTC" Description="Timezone for the container logs." Type="Variable" Display="advanced" Required="false" Mask="false">UTC</Config>
 </Container>

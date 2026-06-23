@@ -35,5 +35,7 @@
   
   <Config Name="Site Title" Target="RUSTPAD_TITLE" Default="RustPad" Description="Custom website title rendered in the navigation header." Type="Variable" Display="always" Required="false" Mask="false">RustPad</Config>
 
+  <Config Name="Highlight Languages" Target="HIGHLIGHT_LANGUAGES" Default="" Description="Comma-separated list of programming language codes for syntax highlight choices (e.g. rust,javascript,python). Leave empty for all standard languages." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+
   <Config Name="Timezone" Target="TZ" Default="UTC" Description="Timezone for the container logs." Type="Variable" Display="advanced" Required="false" Mask="false">UTC</Config>
 </Container>
