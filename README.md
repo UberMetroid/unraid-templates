@@ -4,24 +4,14 @@ This repository contains official Unraid XML templates for deploying and hosting
 
 ## Application Suite
 
-*   **[RustDo](https://github.com/UberMetroid/RustDo)**: A minimalist, secure, and clean task manager/todo list.
-    *   **Default Port**: `4403`
-    *   **Data Directory**: `/app/data`
-*   **[RustDrop](https://github.com/UberMetroid/RustDrop)**: A drag-and-drop file sharing portal with customizable retention and quota limits.
-    *   **Default Port**: `4401`
-    *   **Data Directory**: `/usr/src/app/data` (config) & `/usr/src/app/uploads` (file storage)
-*   **[RustKan](https://github.com/UberMetroid/RustKan)**: A clean, secure, and lightning-fast Kanban board application.
-    *   **Default Port**: `4405`
-    *   **Data Directory**: `/usr/src/app/data`
-*   **[RustPad](https://github.com/UberMetroid/RustPad)**: A collaborative real-time notepad and text editor.
-    *   **Default Port**: `4402`
-    *   **Data Directory**: `/app/data`
-*   **[RustWho](https://github.com/UberMetroid/RustWho)**: A lightning-fast, privacy-respecting WHOIS, IP, and ASN lookup utility.
-    *   **Default Port**: `4404`
-    *   **Data Directory**: None (stateless)
-*   **[Rustle](https://github.com/UberMetroid/Rustle)**: An optimized Wordle game clone.
-    *   **Default Port**: `4409`
-    *   **Data Directory**: None (stateless)
+| Icon | Application | Description | Default Port | Data Directory |
+| :---: | :--- | :--- | :---: | :--- |
+| <img src="https://raw.githubusercontent.com/UberMetroid/RustDo/main/frontend/Assets/favicon.png" width="48" height="48"> | **[RustDo](https://github.com/UberMetroid/RustDo)** | A minimalist, secure, and clean task manager/todo list. | `4403` | `/app/data` |
+| <img src="https://raw.githubusercontent.com/UberMetroid/RustDrop/main/frontend/Assets/assets/icon.png" width="48" height="48"> | **[RustDrop](https://github.com/UberMetroid/RustDrop)** | A drag-and-drop file sharing portal with customizable retention and quota limits. | `4401` | `/usr/src/app/data` (config) & `/usr/src/app/uploads` (storage) |
+| <img src="https://raw.githubusercontent.com/UberMetroid/RustKan/main/logo.png" width="48" height="48"> | **[RustKan](https://github.com/UberMetroid/RustKan)** | A clean, secure, and lightning-fast Kanban board application. | `4405` | `/usr/src/app/data` |
+| <img src="https://raw.githubusercontent.com/UberMetroid/RustPad/main/frontend/Assets/rustpad.png" width="48" height="48"> | **[RustPad](https://github.com/UberMetroid/RustPad)** | A collaborative real-time notepad and text editor. | `4402` | `/app/data` |
+| <img src="https://raw.githubusercontent.com/UberMetroid/RustWho/main/frontend/Assets/assets/logo.png" width="48" height="48"> | **[RustWho](https://github.com/UberMetroid/RustWho)** | A lightning-fast, privacy-respecting WHOIS, IP, and ASN lookup utility. | `4404` | None (stateless) |
+| <img src="https://raw.githubusercontent.com/UberMetroid/Rustle/master/public/favicon.png" width="48" height="48"> | **[Rustle](https://github.com/UberMetroid/Rustle)** | An optimized Wordle game clone. | `4409` | None (stateless) |
 
 ## How to Install on Unraid
 
