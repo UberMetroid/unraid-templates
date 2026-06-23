@@ -18,8 +18,7 @@
     - High performance and tiny resource footprint.&#xD;
     - Dynamic color themes (Light, Dark, Nord, Dracula, Sepia).&#xD;
     - Multilingual interface support.&#xD;
-    - Optional access PIN encryption for privacy.&#xD;
-    - Single-list mode capability for simplified task management.
+    - Optional access PIN encryption for privacy.
   </Overview>
   <Category>Productivity:Tools;Tools:Utilities;</Category>
   <WebUI>http://[IP]:[PORT:4403]/</WebUI>
@@ -37,8 +36,5 @@
   <Config Name="Access PIN" Target="RUSTDO_PIN" Default="" Description="Optional cryptographic access PIN to secure the board (leave empty for public mode)." Type="Variable" Display="always" Required="false" Mask="true"></Config>
   
   <Config Name="Site Title" Target="RUSTDO_TITLE" Default="RustDo" Description="Custom website title rendered in the navigation header." Type="Variable" Display="always" Required="false" Mask="false">RustDo</Config>
-  
-  <Config Name="Single List Mode" Target="SINGLE_LIST" Default="false" Description="Set to 'true' to restrict the application to a single task list, hiding the list sidebar." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-
   <Config Name="Timezone" Target="TZ" Default="UTC" Description="Timezone for the container logs." Type="Variable" Display="advanced" Required="false" Mask="false">UTC</Config>
 </Container>
