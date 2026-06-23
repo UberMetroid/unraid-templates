@@ -19,6 +19,9 @@ This repository contains official Unraid XML templates for deploying and hosting
 *   **[RustWho](https://github.com/UberMetroid/RustWho)**: A lightning-fast, privacy-respecting WHOIS, IP, and ASN lookup utility.
     *   **Default Port**: `4404`
     *   **Data Directory**: None (stateless)
+*   **[Rustle](https://github.com/UberMetroid/Rustle)**: An optimized Wordle game clone.
+    *   **Default Port**: `4409`
+    *   **Data Directory**: None (stateless)
 
 ## How to Install on Unraid
 
@@ -27,4 +30,4 @@ To use these templates on your Unraid server:
 1. Copy the URL of this repository: `https://github.com/UberMetroid/unraid-templates`
 2. Go to your Unraid WebUI.
 3. Open the **Docker** tab, go to **Template Repositories** (or via Community Applications configuration), and add this repository link.
-4. Search for `RustDo`, `RustDrop`, `RustKan`, `RustPad`, or `RustWho` to install them with 1-click presets.
+4. Search for `RustDo`, `RustDrop`, `RustKan`, `RustPad`, `RustWho`, or `Rustle` to install them with 1-click presets.
