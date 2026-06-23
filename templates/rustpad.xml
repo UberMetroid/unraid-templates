@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>RustPad</Name>
   <Repository>ghcr.io/ubermetroid/rustpad:latest</Repository>
-  <Registry>https://github.com/UberMetroid/RustPad/pkgs/container/rustpad</Registry>
+  <Registry>https://ghcr.io</Registry>
   
   <Network>bridge</Network>
   <Privileged>false</Privileged>

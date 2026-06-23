@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>RustDrop</Name>
   <Repository>ghcr.io/ubermetroid/rustdrop:latest</Repository>
-  <Registry>https://github.com/UberMetroid/RustDrop/pkgs/container/rustdrop</Registry>
+  <Registry>https://ghcr.io</Registry>
   
   <Network>bridge</Network>
   <Privileged>false</Privileged>
