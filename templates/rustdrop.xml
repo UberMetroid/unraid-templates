@@ -30,9 +30,9 @@
   <Config Name="WebUI Port" Target="4401" Default="4401" Mode="tcp" Description="The main web interface port." Type="Port" Display="always" Required="true" Mask="false">4401</Config>
   
   <!-- Path Mappings -->
-  <Config Name="App Data" Target="/usr/src/app/data" Default="/mnt/user/appdata/rustdrop/data" Mode="rw" Description="Persistent storage for database and config files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rustdrop/data</Config>
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/rustdrop/data" Mode="rw" Description="Persistent storage for database and config files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rustdrop/data</Config>
   
-  <Config Name="Uploads Path" Target="/usr/src/app/uploads" Default="/mnt/user/appdata/rustdrop/uploads" Mode="rw" Description="Directory where uploaded files are stored." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rustdrop/uploads</Config>
+  <Config Name="Uploads Path" Target="/app/uploads" Default="/mnt/user/appdata/rustdrop/uploads" Mode="rw" Description="Directory where uploaded files are stored." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rustdrop/uploads</Config>
   
   <!-- Variables -->
   <Config Name="Access PIN" Target="RUSTDROP_PIN" Default="" Description="Optional access PIN to lock the file portal. Leave empty for public mode." Type="Variable" Display="always" Required="false" Mask="true"></Config>
