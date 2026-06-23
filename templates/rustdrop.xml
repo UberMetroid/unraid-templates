@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
   <Name>RustDrop</Name>
-  <Repository>ghcr.io/ubermetroid/rustdrop:latest</Repository>
-  <Registry>https://ghcr.io</Registry>
+  <Repository>ubermetroid/rustdrop:latest</Repository>
+  <Registry>https://hub.docker.com/r/ubermetroid/rustdrop</Registry>
   
   <Network>bridge</Network>
   <Privileged>false</Privileged>

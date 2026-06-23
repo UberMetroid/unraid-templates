@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
   <Name>RustDo</Name>
-  <Repository>ghcr.io/ubermetroid/rustdo:latest</Repository>
-  <Registry>https://ghcr.io</Registry>
+  <Repository>ubermetroid/rustdo:latest</Repository>
+  <Registry>https://hub.docker.com/r/ubermetroid/rustdo</Registry>
   
   <Network>bridge</Network>
   <Privileged>false</Privileged>
