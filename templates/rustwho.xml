@@ -37,9 +37,5 @@
   
   <Config Name="Allowed Origins" Target="ALLOWED_ORIGINS" Default="*" Description="Comma-separated list of allowed HTTP request origins (CORS). Use '*' to allow all origins." Type="Variable" Display="always" Required="false" Mask="false">*</Config>
   
-  <Config Name="Apprise URL" Target="APPRISE_URL" Default="" Description="Apprise/Discord webhook URL to send lookup notifications." Type="Variable" Display="always" Required="false" Mask="true"></Config>
-
-  <Config Name="Apprise Message" Target="APPRISE_MESSAGE" Default="WHOIS Lookup for {query} ({query_type})" Description="Notification template format. Supports {query} and {query_type} variables." Type="Variable" Display="always" Required="false" Mask="false">WHOIS Lookup for {query} ({query_type})</Config>
-  
   <Config Name="Timezone" Target="TZ" Default="UTC" Description="Timezone for the container logs." Type="Variable" Display="advanced" Required="false" Mask="false">UTC</Config>
 </Container>
