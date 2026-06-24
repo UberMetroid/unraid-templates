@@ -15,7 +15,7 @@
     Key Features:
     - Lightweight, responsive, and secure game engine.
     - Zero external JS library bloat and fast loading.
-    - Dynamic theme options (Light, Dark, High Contrast, Hard Mode).
+    - Dynamic theme options based on the 6 Super Metroid locations (Crateria, Brinstar, Norfair, Wrecked Ship, Maridia, Tourian) with direct Hard Mode toggling.
   </Overview>
   <Category>Game:Board;Productivity:Tools;Network:Web;</Category>
   <WebUI>http://[IP]:[PORT:4409]/</WebUI>
