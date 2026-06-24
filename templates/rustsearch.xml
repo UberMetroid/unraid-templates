@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Container version="2">
+  <Name>RustSearch</Name>
+  <Repository>ubermetroid/rustsearch:latest</Repository>
+  <Registry>https://hub.docker.com/r/ubermetroid/rustsearch</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Shell>sh</Shell>
+  <ExtraParams>--restart unless-stopped --log-opt max-size=50m</ExtraParams>
+  <Support>https://github.com/UberMetroid/RustSearch/issues</Support>
+  <Project>https://github.com/UberMetroid/RustSearch</Project>
+  <Overview>
+    RustSearch is a minimalist, privacy-focused metasearch engine with an integrated AI assistant. It proxies queries through SearXNG to protect your privacy, and processes AI queries locally in the browser using Wllama or via a self-hosted API.
+  </Overview>
+  <Category>Network:Web;Productivity:Tools;AI:Search;</Category>
+  <WebUI>http://[IP]:[PORT:4408]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/RustSearch/main/client/public/favicon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/rustsearch.xml</TemplateURL>
+  <Requires>SearXNG metasearch runs inside the same container in the background.</Requires>
+  <Config Name="WebUI Port" Target="4408" Default="4408" Mode="tcp" Description="The host port mapped to the web server (default container port: 4408)." Type="Port" Display="always" Required="true" Mask="false">4408</Config>
+  <Config Name="Access Keys" Target="ACCESS_KEYS" Default="" Description="Optional comma-separated list of keys to restrict access to search and inference endpoints." Type="Variable" Display="always" Required="false" Mask="true" />
+  <Config Name="Access Key Timeout Hours" Target="ACCESS_KEY_TIMEOUT_HOURS" Default="0" Description="How long a valid access key remains cached before revalidation is required (set to 0 to disable timeouts)." Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Internal OpenAI API Base URL" Target="INTERNAL_OPENAI_COMPATIBLE_API_BASE_URL" Default="" Description="Base URL of a self-hosted or external OpenAI-compatible API to offer custom AI processing." Type="Variable" Display="always" Required="false" Mask="false" />
+  <Config Name="Internal OpenAI API Key" Target="INTERNAL_OPENAI_COMPATIBLE_API_KEY" Default="" Description="API key for the custom OpenAI-compatible API." Type="Variable" Display="always" Required="false" Mask="true" />
+  <Config Name="Internal OpenAI API Model" Target="INTERNAL_OPENAI_COMPATIBLE_API_MODEL" Default="" Description="Specific model ID to use for the custom API (leave empty to fetch and select a random model from the endpoint)." Type="Variable" Display="always" Required="false" Mask="false" />
+  <Config Name="Internal OpenAI API Display Name" Target="INTERNAL_OPENAI_COMPATIBLE_API_NAME" Default="Internal API" Description="Display name for the custom API in the settings dropdown menu." Type="Variable" Display="always" Required="false" Mask="false">Internal API</Config>
+  <Config Name="Default Inference Type" Target="DEFAULT_INFERENCE_TYPE" Default="local" Description="Default AI processing location to select (e.g. 'local' for on-device browser models, 'internal-api' for custom endpoint)." Type="Variable" Display="always" Required="false" Mask="false">local</Config>
+  <Config Name="Default Local Model ID" Target="WLLAMA_DEFAULT_MODEL_ID" Default="" Description="Default local Wllama model ID to download and run in-browser." Type="Variable" Display="advanced" Required="false" Mask="false" />
+</Container>
