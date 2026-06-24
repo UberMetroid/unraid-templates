@@ -28,4 +28,6 @@
   <Config Name="Allowed Origins" Target="ALLOWED_ORIGINS" Default="*" Description="Comma-separated list of allowed HTTP request origins (CORS filter). Use '*' to allow all origins." Type="Variable" Display="always" Required="false" Mask="false">*</Config>
   <Config Name="Timezone" Target="TZ" Default="UTC" Description="Timezone for the container logs." Type="Variable" Display="advanced" Required="false" Mask="false">UTC</Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/rustpad" Mode="rw" Description="Persistent storage for notepad database files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rustpad</Config>
+  <Config Name="Enable Translation Selector" Target="ENABLE_TRANSLATION" Default="false" Description="Enable the multi-language / translation selector in the navigation header (true/false). Defaults to false." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Max Connection Attempts" Target="MAX_ATTEMPTS" Default="5" Description="Number of failed PIN attempts permitted before locking out the user client IP address." Type="Variable" Display="always" Required="false" Mask="false">5</Config>
 </Container>
