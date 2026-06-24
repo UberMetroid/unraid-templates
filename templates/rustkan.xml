@@ -14,7 +14,7 @@
     
     Key Features:
     - High performance and tiny resource footprint.
-    - Dynamic color themes (Light, Dark, Nord, Dracula, Sepia).
+    - Dynamic theme options based on the 6 Super Metroid locations (Crateria, Brinstar, Norfair, Wrecked Ship, Maridia, Tourian).
     - Multilingual interface support.
     - Optional access PIN encryption for privacy.
   </Overview>
@@ -24,10 +24,10 @@
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/rustkan.xml</TemplateURL>
   <Requires>If you lock the application with a PIN, it is recommended to set a strong PIN and back up your data directory.</Requires>
   <Config Name="WebUI Port" Target="4405" Default="4405" Mode="tcp" Description="The main web interface port." Type="Port" Display="always" Required="true" Mask="false">4405</Config>
-  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/rustkan" Mode="rw" Description="Persistent storage for your Kanban boards." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rustkan</Config>
   <Config Name="Access PIN" Target="RUSTKAN_PIN" Default="" Description="Optional numerical PIN to lock access to the rustkan interface (leave empty for public mode)." Type="Variable" Display="always" Required="false" Mask="true" />
   <Config Name="Site Title" Target="SITE_TITLE" Default="Rustkan" Description="Custom website title rendered in the navigation header or browser tab." Type="Variable" Display="always" Required="false" Mask="false">Rustkan</Config>
   <Config Name="Base URL" Target="BASE_URL" Default="http://localhost:4405" Description="Application base URL. Highly recommended to set if using a reverse proxy to ensure redirect and socket links are generated correctly." Type="Variable" Display="always" Required="false" Mask="false">http://localhost:4405</Config>
   <Config Name="Allowed Origins" Target="ALLOWED_ORIGINS" Default="*" Description="Comma-separated list of allowed HTTP request origins (CORS filter). Use '*' to allow all origins." Type="Variable" Display="always" Required="false" Mask="false">*</Config>
   <Config Name="Timezone" Target="TZ" Default="UTC" Description="Timezone for the container logs." Type="Variable" Display="advanced" Required="false" Mask="false">UTC</Config>
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/rustkan" Mode="rw" Description="Persistent storage for your Kanban boards." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rustkan</Config>
 </Container>
