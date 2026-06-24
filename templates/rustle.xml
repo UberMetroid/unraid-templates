@@ -19,7 +19,7 @@
   </Overview>
   <Category>Game:Board;Productivity:Tools;Network:Web;</Category>
   <WebUI>http://[IP]:[PORT:4409]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/UberMetroid/Rustle/master/public/favicon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/Rustle/main/public/favicon.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/rustle.xml</TemplateURL>
   <Requires>Does not require any persistent database path or volume bindings.</Requires>
   <Config Name="WebUI Port" Target="4409" Default="4409" Mode="tcp" Description="The host port mapped to the web server (default container port: 4409)." Type="Port" Display="always" Required="true" Mask="false">4409</Config>
