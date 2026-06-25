@@ -37,5 +37,4 @@
   <Config Name="Allowed Extensions" Target="ALLOWED_EXTENSIONS" Default="" Description="Comma-separated list of allowed file extensions (e.g. pdf,png,zip). Leave empty to allow all." Type="Variable" Display="always" Required="false" Mask="false" />
   <Config Name="Enable Translation Selector" Target="ENABLE_TRANSLATION" Default="false" Description="Enable the multi-language / translation selector in the navigation header (true/false). Defaults to false." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="Max Connection Attempts" Target="MAX_ATTEMPTS" Default="5" Description="Number of failed PIN attempts permitted before locking out the user client IP address." Type="Variable" Display="always" Required="false" Mask="false">5</Config>
-  <Config Name="Log Directory" Target="/app/log" Default="/mnt/user/appdata/rustdrop/log" Mode="rw" Description="Path to store persistent application logs (app.log and error.log)." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rustdrop/log</Config>
 </Container>
