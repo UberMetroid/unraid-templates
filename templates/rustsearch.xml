@@ -10,20 +10,24 @@
   <Support>https://github.com/UberMetroid/RustSearch/issues</Support>
   <Project>https://github.com/UberMetroid/RustSearch</Project>
   <Overview>
-    RustSearch is a minimalist, privacy-focused metasearch engine with an integrated AI assistant. It proxies queries through SearXNG to protect your privacy, and processes AI queries locally in the browser using Wllama or via a self-hosted API.
+    RustSearch is a minimalist, privacy-focused metasearch engine with an integrated AI assistant. It proxies queries through SearXNG to protect your privacy, and processes AI queries using a user-configured self-hosted Ollama server.
+    
+    Key Features:
+    - High performance and tiny resource footprint.
+    - Dynamic theme options based on the 6 Super Metroid locations (Crateria, Brinstar, Norfair, Wrecked Ship, Maridia, Tourian).
+    - Multilingual interface support.
+    - Optional access PIN encryption for privacy.
   </Overview>
   <Category>Network:Web;Productivity:Tools;AI:Search;</Category>
   <WebUI>http://[IP]:[PORT:4408]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/UberMetroid/RustSearch/main/client/public/favicon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/RustSearch/main/frontend/favicon.svg</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/rustsearch.xml</TemplateURL>
   <Requires>SearXNG metasearch runs inside the same container in the background.</Requires>
   <Config Name="WebUI Port" Target="4408" Default="4408" Mode="tcp" Description="The host port mapped to the web server (default container port: 4408)." Type="Port" Display="always" Required="true" Mask="false">4408</Config>
-  <Config Name="Access Keys" Target="ACCESS_KEYS" Default="" Description="Optional comma-separated list of keys to restrict access to search and inference endpoints." Type="Variable" Display="always" Required="false" Mask="true" />
-  <Config Name="Access Key Timeout Hours" Target="ACCESS_KEY_TIMEOUT_HOURS" Default="0" Description="How long a valid access key remains cached before revalidation is required (set to 0 to disable timeouts)." Type="Variable" Display="always" Required="false" Mask="false">0</Config>
-  <Config Name="Internal OpenAI API Base URL" Target="INTERNAL_OPENAI_COMPATIBLE_API_BASE_URL" Default="" Description="Base URL of a self-hosted or external OpenAI-compatible API to offer custom AI processing." Type="Variable" Display="always" Required="false" Mask="false" />
-  <Config Name="Internal OpenAI API Key" Target="INTERNAL_OPENAI_COMPATIBLE_API_KEY" Default="" Description="API key for the custom OpenAI-compatible API." Type="Variable" Display="always" Required="false" Mask="true" />
-  <Config Name="Internal OpenAI API Model" Target="INTERNAL_OPENAI_COMPATIBLE_API_MODEL" Default="" Description="Specific model ID to use for the custom API (leave empty to fetch and select a random model from the endpoint)." Type="Variable" Display="always" Required="false" Mask="false" />
-  <Config Name="Internal OpenAI API Display Name" Target="INTERNAL_OPENAI_COMPATIBLE_API_NAME" Default="Internal API" Description="Display name for the custom API in the settings dropdown menu." Type="Variable" Display="always" Required="false" Mask="false">Internal API</Config>
-  <Config Name="Default Inference Type" Target="DEFAULT_INFERENCE_TYPE" Default="local" Description="Default AI processing location to select (e.g. 'local' for on-device browser models, 'internal-api' for custom endpoint)." Type="Variable" Display="always" Required="false" Mask="false">local</Config>
-  <Config Name="Default Local Model ID" Target="WLLAMA_DEFAULT_MODEL_ID" Default="" Description="Default local Wllama model ID to download and run in-browser." Type="Variable" Display="advanced" Required="false" Mask="false" />
+  <Config Name="Access PIN" Target="RUSTSEARCH_PIN" Default="" Description="Optional numerical PIN to lock access to the rustsearch interface (leave empty for public mode)." Type="Variable" Display="always" Required="false" Mask="true" />
+  <Config Name="Site Title" Target="SITE_TITLE" Default="RustSearch" Description="Custom website title rendered in the navigation header or browser tab." Type="Variable" Display="always" Required="false" Mask="false">RustSearch</Config>
+  <Config Name="Ollama Base URL" Target="OLLAMA_BASE_URL" Default="http://localhost:11434" Description="URL of the self-hosted Ollama server (e.g. http://192.168.1.50:11434)." Type="Variable" Display="always" Required="true" Mask="false">http://localhost:11434</Config>
+  <Config Name="Ollama Model" Target="OLLAMA_MODEL" Default="llama3" Description="Model name to use for AI inference on the Ollama server (e.g. llama3, llama3:8b, mistral, etc.)." Type="Variable" Display="always" Required="true" Mask="false">llama3</Config>
+  <Config Name="Enable Translation Selector" Target="ENABLE_TRANSLATION" Default="true" Description="Enable the multi-language / translation selector in the navigation header (true/false). Defaults to true." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Max Connection Attempts" Target="MAX_ATTEMPTS" Default="5" Description="Number of failed PIN attempts permitted before locking out the user client IP address." Type="Variable" Display="always" Required="false" Mask="false">5</Config>
 </Container>
