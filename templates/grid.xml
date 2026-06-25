@@ -7,8 +7,8 @@
   <Privileged>false</Privileged>
   <Shell>sh</Shell>
   <ExtraParams>--restart unless-stopped --log-opt max-size=50m</ExtraParams>
-  <Support>https://github.com/UberMetroid/Grid/issues</Support>
-  <Project>https://github.com/UberMetroid/Grid</Project>
+  <Support>https://github.com/UberMetroid/grid/issues</Support>
+  <Project>https://github.com/UberMetroid/grid</Project>
   <Overview>
     Grid is a clean, secure, and lightning-fast Kanban board application built in Rust with Yew and Axum.
     
@@ -20,7 +20,7 @@
   </Overview>
   <Category>Productivity:Tools;Tools:Utilities;Network:Web;</Category>
   <WebUI>http://[IP]:[PORT:4405]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/UberMetroid/Grid/main/logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/grid/main/logo.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/grid.xml</TemplateURL>
   <Requires>If you lock the application with a PIN, it is recommended to set a strong PIN and back up your data directory.</Requires>
   <Config Name="WebUI Port" Target="4405" Default="4405" Mode="tcp" Description="The main web interface port." Type="Port" Display="always" Required="true" Mask="false">4405</Config>

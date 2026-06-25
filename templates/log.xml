@@ -7,8 +7,8 @@
   <Privileged>false</Privileged>
   <Shell>sh</Shell>
   <ExtraParams>--restart unless-stopped --log-opt max-size=50m</ExtraParams>
-  <Support>https://github.com/UberMetroid/Log/issues</Support>
-  <Project>https://github.com/UberMetroid/Log</Project>
+  <Support>https://github.com/UberMetroid/log/issues</Support>
+  <Project>https://github.com/UberMetroid/log</Project>
   <Overview>
     Log is a self-hosted, lightweight collaborative notepad application built in Rust with Yew and Axum.
     
@@ -18,7 +18,7 @@
   </Overview>
   <Category>Productivity:Office;Tools:Utilities;</Category>
   <WebUI>http://[IP]:[PORT:4402]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/UberMetroid/Log/main/frontend/Assets/log.png</Icon>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/log/main/frontend/Assets/log.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/log.xml</TemplateURL>
   <Requires>If you lock the application with a PIN, it is recommended to set a strong PIN and back up your data directory.</Requires>
   <Config Name="WebUI Port" Target="4402" Default="4402" Mode="tcp" Description="The main web interface port." Type="Port" Display="always" Required="true" Mask="false">4402</Config>

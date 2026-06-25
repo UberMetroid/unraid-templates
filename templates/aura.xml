@@ -7,8 +7,8 @@
   <Privileged>false</Privileged>
   <Shell>sh</Shell>
   <ExtraParams>--restart unless-stopped --log-opt max-size=50m</ExtraParams>
-  <Support>https://github.com/UberMetroid/Aura/issues</Support>
-  <Project>https://github.com/UberMetroid/Aura</Project>
+  <Support>https://github.com/UberMetroid/aura/issues</Support>
+  <Project>https://github.com/UberMetroid/aura</Project>
   <Overview>
     Aura is a minimalist, privacy-focused metasearch engine with an integrated AI assistant. It proxies queries through SearXNG to protect your privacy, and processes AI queries using a user-configured self-hosted Ollama server.
     
@@ -20,7 +20,7 @@
   </Overview>
   <Category>Network:Web;Productivity:Tools;AI:Search;</Category>
   <WebUI>http://[IP]:[PORT:4408]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/UberMetroid/Aura/main/frontend/favicon.svg</Icon>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/aura/main/frontend/favicon.svg</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/aura.xml</TemplateURL>
   <Requires>Ensure the App Data volume is mapped if you want to store configuration (.env) files and logs.</Requires>
   <Config Name="WebUI Port" Target="4408" Default="4408" Mode="tcp" Description="The host port mapped to the web server (default container port: 4408)." Type="Port" Display="always" Required="true" Mask="false">4408</Config>

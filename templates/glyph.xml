@@ -7,8 +7,8 @@
   <Privileged>false</Privileged>
   <Shell>sh</Shell>
   <ExtraParams>--restart unless-stopped --log-opt max-size=50m</ExtraParams>
-  <Support>https://github.com/UberMetroid/Glyph/issues</Support>
-  <Project>https://github.com/UberMetroid/Glyph</Project>
+  <Support>https://github.com/UberMetroid/glyph/issues</Support>
+  <Project>https://github.com/UberMetroid/glyph</Project>
   <Overview>
     Glyph is an optimized, responsive, and secure clone of the popular Wordle game built using Rust, Yew, and WebAssembly, served by a native Axum backend.
 
@@ -19,7 +19,7 @@
   </Overview>
   <Category>Game:Board;Productivity:Tools;Network:Web;</Category>
   <WebUI>http://[IP]:[PORT:4409]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/UberMetroid/Glyph/main/public/favicon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/glyph/main/public/favicon.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/glyph.xml</TemplateURL>
   <Requires>Ensure the App Data volume is mapped if you want to store configuration (.env) files and logs.</Requires>
   <Config Name="WebUI Port" Target="4409" Default="4409" Mode="tcp" Description="The host port mapped to the web server (default container port: 4409)." Type="Port" Display="always" Required="true" Mask="false">4409</Config>

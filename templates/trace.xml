@@ -7,8 +7,8 @@
   <Privileged>false</Privileged>
   <Shell>sh</Shell>
   <ExtraParams>--restart unless-stopped --log-opt max-size=50m</ExtraParams>
-  <Support>https://github.com/UberMetroid/Trace/issues</Support>
-  <Project>https://github.com/UberMetroid/Trace</Project>
+  <Support>https://github.com/UberMetroid/trace/issues</Support>
+  <Project>https://github.com/UberMetroid/trace</Project>
   <Overview>
     Trace is a clean, secure, and lightning-fast WHOIS, IP, and ASN lookup utility built in Rust with Yew and Axum.
     
@@ -21,7 +21,7 @@
   </Overview>
   <Category>Tools:Utilities;Network:Web;</Category>
   <WebUI>http://[IP]:[PORT:4404]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/UberMetroid/Trace/main/frontend/Assets/assets/logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/trace/main/frontend/Assets/assets/logo.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/trace.xml</TemplateURL>
   <Requires>Ensure the App Data volume is mapped if you want to store configuration (.env) files and logs.</Requires>
   <Config Name="WebUI Port" Target="4404" Default="4404" Mode="tcp" Description="The host port mapped to the web server (default container port: 4404)." Type="Port" Display="always" Required="true" Mask="false">4404</Config>

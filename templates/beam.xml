@@ -7,8 +7,8 @@
   <Privileged>false</Privileged>
   <Shell>sh</Shell>
   <ExtraParams>--restart unless-stopped --log-opt max-size=50m</ExtraParams>
-  <Support>https://github.com/UberMetroid/Beam/issues</Support>
-  <Project>https://github.com/UberMetroid/Beam</Project>
+  <Support>https://github.com/UberMetroid/beam/issues</Support>
+  <Project>https://github.com/UberMetroid/beam</Project>
   <Overview>
     Beam is a self-hosted, lightweight file-sharing portal built in Rust with Yew and Axum.
     
@@ -20,7 +20,7 @@
   </Overview>
   <Category>Tools:Utilities;Network:Web;</Category>
   <WebUI>http://[IP]:[PORT:4401]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/UberMetroid/Beam/main/frontend/Assets/assets/icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/beam/main/frontend/Assets/assets/icon.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/beam.xml</TemplateURL>
   <Requires>Ensure the Uploads Path volume has sufficient disk space for the expected file sizes.</Requires>
   <Config Name="WebUI Port" Target="4401" Default="4401" Mode="tcp" Description="The main web interface port." Type="Port" Display="always" Required="true" Mask="false">4401</Config>
