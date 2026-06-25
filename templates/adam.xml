@@ -7,8 +7,8 @@
   <Privileged>false</Privileged>
   <Shell>sh</Shell>
   <ExtraParams>--restart unless-stopped --log-opt max-size=50m</ExtraParams>
-  <Support>https://github.com/UberMetroid/Adam/issues</Support>
-  <Project>https://github.com/UberMetroid/Adam</Project>
+  <Support>https://github.com/UberMetroid/adam/issues</Support>
+  <Project>https://github.com/UberMetroid/adam</Project>
   <Overview>
     Adam is a clean, secure, and minimalist ToDo list application built in Rust with Yew and Axum.
     
@@ -20,7 +20,7 @@
   </Overview>
   <Category>Productivity:Tools;Tools:Utilities;</Category>
   <WebUI>http://[IP]:[PORT:4403]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/UberMetroid/Adam/main/frontend/Assets/favicon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/adam/main/frontend/Assets/favicon.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/adam.xml</TemplateURL>
   <Requires>If you lock the application with a PIN, it is recommended to set a strong PIN and back up your data directory.</Requires>
   <Config Name="WebUI Port" Target="4403" Default="4403" Mode="tcp" Description="The main web interface port." Type="Port" Display="always" Required="true" Mask="false">4403</Config>
