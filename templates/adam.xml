@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
   <Name>Adam</Name>
-  <Repository>ubermetroid/adam:nix</Repository>
+  <Repository>ghcr.io/ubermetroid/adam:nix</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/adam</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
