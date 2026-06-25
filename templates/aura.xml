@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
   <Name>Aura</Name>
-  <Repository>ubermetroid/aura:latest</Repository>
+  <Repository>ubermetroid/aura:nix</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/aura</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>

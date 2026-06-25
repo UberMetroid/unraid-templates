@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
   <Name>Glyph</Name>
-  <Repository>ubermetroid/glyph:latest</Repository>
+  <Repository>ubermetroid/glyph:nix</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/glyph</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
