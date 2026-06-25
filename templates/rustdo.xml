@@ -31,5 +31,7 @@
   <Config Name="Timezone" Target="TZ" Default="UTC" Description="Timezone for the container logs." Type="Variable" Display="advanced" Required="false" Mask="false">UTC</Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/rustdo" Mode="rw" Description="Persistent storage for your todo lists." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rustdo</Config>
   <Config Name="Enable Translation Selector" Target="ENABLE_TRANSLATION" Default="false" Description="Enable the multi-language / translation selector in the navigation header (true/false). Defaults to false." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Enable Themes Toggle" Target="ENABLE_THEMES" Default="true" Description="Enable the Super Metroid theme selector in the navigation header (true/false). Defaults to true." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Print Button" Target="ENABLE_PRINT" Default="true" Description="Enable the print button in the navigation header (true/false). Defaults to true." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Max Connection Attempts" Target="MAX_ATTEMPTS" Default="5" Description="Number of failed PIN attempts permitted before locking out the user client IP address." Type="Variable" Display="always" Required="false" Mask="false">5</Config>
 </Container>
