@@ -22,7 +22,7 @@
   <WebUI>http://[IP]:[PORT:4401]/</WebUI>
   <Icon>https://raw.githubusercontent.com/UberMetroid/beam/main/frontend/Assets/assets/icon.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/beam.xml</TemplateURL>
-  <Requires>Ensure the Uploads Path volume has sufficient disk space for the expected file sizes.</Requires>
+  <Requires>Ensure the Uploads Path volume has sufficient disk space for the expected file sizes. Note: The appdata folder on the host must be owned by nobody:users (UID 99 / GID 100) for the container to have read/write access.</Requires>
   <Config Name="WebUI Port" Target="4401" Default="4401" Mode="tcp" Description="The main web interface port." Type="Port" Display="always" Required="true" Mask="false">4401</Config>
   <Config Name="Access PIN" Target="BEAM_PIN" Default="" Description="Optional numerical PIN to lock access to the beam interface (leave empty for public mode)." Type="Variable" Display="always" Required="false" Mask="true" />
   <Config Name="Site Title" Target="SITE_TITLE" Default="Beam" Description="Custom website title rendered in the navigation header or browser tab." Type="Variable" Display="always" Required="false" Mask="false">Beam</Config>
