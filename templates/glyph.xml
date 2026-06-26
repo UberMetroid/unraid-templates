@@ -21,7 +21,7 @@
   <WebUI>http://[IP]:[PORT:4409]/</WebUI>
   <Icon>https://raw.githubusercontent.com/UberMetroid/glyph/main/frontend/public/favicon.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/glyph.xml</TemplateURL>
-  <Requires>Ensure the App Data volume is mapped if you want to store configuration (.env) files and logs. Note: The appdata folder on the host must be owned by nobody:users (UID 99 / GID 100) for the container to have read/write access.</Requires>
+  <Requires>Ensure the App Data volume is mapped if you want to store configuration (.env) files and logs. Note: The container runs as nobody:users (UID 99 / GID 100) out of the box. Ensure the mapped host appdata folder has read/write permissions for UID 99 / GID 100.</Requires>
   <Config Name="WebUI Port" Target="4409" Default="4409" Mode="tcp" Description="The host port mapped to the web server (default container port: 4409)." Type="Port" Display="always" Required="true" Mask="false">4409</Config>
   <Config Name="Access PIN" Target="GLYPH_PIN" Default="" Description="Optional numerical PIN to lock access to the glyph interface (leave empty for public mode)." Type="Variable" Display="always" Required="false" Mask="true" />
   <Config Name="Max Connection Attempts" Target="MAX_ATTEMPTS" Default="5" Description="Number of failed PIN attempts permitted before locking out the user client IP address." Type="Variable" Display="always" Required="false" Mask="false">5</Config>
