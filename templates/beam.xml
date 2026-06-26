@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Shell>sh</Shell>
-  <ExtraParams>--restart unless-stopped --log-opt max-size=50m</ExtraParams>
+  <ExtraParams>--user 99:100 --restart unless-stopped --log-opt max-size=50m</ExtraParams>
   <Support>https://github.com/UberMetroid/beam/issues</Support>
   <Project>https://github.com/UberMetroid/beam</Project>
   <Overview>
@@ -40,5 +40,5 @@
   <Config Name="Allowed Extensions" Target="ALLOWED_EXTENSIONS" Default="" Description="Comma-separated list of allowed file extensions (e.g. pdf,png,zip). Leave empty to allow all." Type="Variable" Display="always" Required="false" Mask="false" />
   <Config Name="Enable Translation Selector" Target="ENABLE_TRANSLATION" Default="false" Description="Enable the multi-language / translation selector in the navigation header (true/false). Defaults to false." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="Enable Themes Toggle" Target="ENABLE_THEMES" Default="true" Description="Enable the Super Metroid theme selector in the navigation header (true/false). Defaults to true." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="Enable Print Button" Target="ENABLE_PRINT" Default="true" Description="Enable the print button in the navigation header (true/false). Defaults to true." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Print Button" Target="ENABLE_PRINT" Default="false" Description="Enable the print button in the navigation header (true/false). Defaults to false." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
 </Container>
