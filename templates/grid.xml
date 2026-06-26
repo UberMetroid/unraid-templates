@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
   <Name>grid</Name>
-  <Repository>ubermetroid/grid:nix</Repository>
+  <Repository>ubermetroid/grid:latest</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/grid</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
