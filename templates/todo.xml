@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
   <Name>Todo</Name>
-  <Repository>ghcr.io/ubermetroid/todo:nix</Repository>
+  <Repository>ubermetroid/todo:nix</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/todo</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
