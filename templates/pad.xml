@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
-  <Name>Pad</Name>
+  <Name>pad</Name>
   <Repository>ubermetroid/pad:nix</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/pad</Registry>
   <Network>bridge</Network>

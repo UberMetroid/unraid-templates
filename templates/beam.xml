@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
-  <Name>Beam</Name>
+  <Name>beam</Name>
   <Repository>ubermetroid/beam:nix</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/beam</Registry>
   <Network>bridge</Network>

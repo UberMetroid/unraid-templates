@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
-  <Name>Todo</Name>
+  <Name>todo</Name>
   <Repository>ubermetroid/todo:nix</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/todo</Registry>
   <Network>bridge</Network>
