@@ -39,4 +39,6 @@
   <Config Name="Enable Translation Selector" Target="ENABLE_TRANSLATION" Default="false" Description="Enable the multi-language / translation selector in the navigation header (true/false). Defaults to false." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="Enable Themes Toggle" Target="ENABLE_THEMES" Default="true" Description="Enable the Super Metroid theme selector in the navigation header (true/false). Defaults to true." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
   <Config Name="Enable Print Button" Target="ENABLE_PRINT" Default="false" Description="Enable the print button in the navigation header (true/false). Defaults to false." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Show Version Number" Target="SHOW_VERSION" Default="true" Description="Display the application version number in the footer (true/false). Defaults to true." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+  <Config Name="Show GitHub Link" Target="SHOW_GITHUB" Default="true" Description="Display a link to the GitHub profile in the footer (true/false). Defaults to true." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
 </Container>
