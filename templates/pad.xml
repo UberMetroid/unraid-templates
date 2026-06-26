@@ -3,6 +3,7 @@
   <Name>pad</Name>
   <Repository>ubermetroid/pad:latest</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/pad</Registry>
+  <Shell>/bin/sh</Shell>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <ExtraParams>--user 99:100 --restart unless-stopped --log-opt max-size=50m</ExtraParams>

@@ -3,6 +3,7 @@
   <Name>beam</Name>
   <Repository>ubermetroid/beam:latest</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/beam</Registry>
+  <Shell>/bin/sh</Shell>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <ExtraParams>--user 99:100 --restart unless-stopped --log-opt max-size=50m</ExtraParams>
