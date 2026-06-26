@@ -20,7 +20,7 @@
   </Overview>
   <Category>Productivity:Tools;Tools:Utilities;Network:Web;</Category>
   <WebUI>http://[IP]:[PORT:4405]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/UberMetroid/grid/main/logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/grid/main/frontend/Assets/favicon.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/grid.xml</TemplateURL>
   <Requires>If you lock the application with a PIN, it is recommended to set a strong PIN and back up your data directory. Note: The container runs as nobody:users (UID 99 / GID 100) out of the box. Ensure the mapped host appdata folder has read/write permissions for UID 99 / GID 100.</Requires>
   <Config Name="WebUI Port" Target="4405" Default="4405" Mode="tcp" Description="The host port mapped to the web server (default container port: 4405)." Type="Port" Display="always" Required="true" Mask="false">4405</Config>
