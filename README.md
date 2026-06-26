@@ -6,7 +6,6 @@ This repository contains official Unraid XML templates for deploying and hosting
 
 | Icon | Application | Description | Default Port | Data Directory |
 | :---: | :--- | :--- | :---: | :--- |
-| <img src="https://raw.githubusercontent.com/UberMetroid/aura/main/frontend/favicon.png" width="48" height="48"> | **[aura](https://github.com/UberMetroid/aura)** | An AI-assisted search tool integrated with status polling and image generation. | `4408` | `/app/data` |
 | <img src="https://raw.githubusercontent.com/UberMetroid/beam/main/frontend/Assets/assets/icon.png" width="48" height="48"> | **[beam](https://github.com/UberMetroid/beam)** | A secure web portal for file transfers, uploads, and payload sharing. | `4401` | `/app/data` (config) & `/app/uploads` (storage) |
 | <img src="https://raw.githubusercontent.com/UberMetroid/glyph/main/frontend/public/favicon.png" width="48" height="48"> | **[glyph](https://github.com/UberMetroid/glyph)** | A web-based word guessing application built in a single Cargo package. | `4409` | None (stateless) |
 | <img src="https://raw.githubusercontent.com/UberMetroid/grid/main/logo.png" width="48" height="48"> | **[grid](https://github.com/UberMetroid/grid)** | A visual project management board for tracking tasks and workflows. | `4405` | `/app/data` |
@@ -21,4 +20,4 @@ To use these templates on your Unraid server:
 1. Copy the URL of this repository: `https://github.com/UberMetroid/unraid-templates`
 2. Go to your Unraid WebUI.
 3. Open the **Docker** tab, go to **Template Repositories** (or via Community Applications configuration), and add this repository link.
-4. Search for `aura`, `beam`, `glyph`, `grid`, `pad`, `todo`, or `trace` to install them with 1-click presets.
+4. Search for `beam`, `glyph`, `grid`, `pad`, `todo`, or `trace` to install them with 1-click presets.
