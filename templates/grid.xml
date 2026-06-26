@@ -5,7 +5,6 @@
   <Registry>https://hub.docker.com/r/ubermetroid/grid</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Shell>sh</Shell>
   <ExtraParams>--user 99:100 --restart unless-stopped --log-opt max-size=50m</ExtraParams>
   <Support>https://github.com/UberMetroid/grid/issues</Support>
   <Project>https://github.com/UberMetroid/grid</Project>
