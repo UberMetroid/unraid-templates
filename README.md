@@ -2,6 +2,8 @@
 
 This repository contains official Unraid XML templates for deploying and hosting a suite of clean, secure, and lightweight applications built in Rust.
 
+All container images are **Nix-built** (no Alpine) and published to Docker Hub. For the build source, see each application's `flake.nix`.
+
 ## Application Suite
 
 | Icon | Application | Description | Default Port | Data Directory |
