@@ -1,0 +1,111 @@
+name: "Sync Unraid XML templates with Docker Hub"
+
+on:
+  schedule:
+    # Every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-templates:
+    name: Sync XML <Repository> tags with Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Sync each XML template
+        env:
+          APPS: "beam grid pad todo trace"
+          DOCKERHUB_NAMESPACE: "ubermetroid"
+        run: |
+          set -euo pipefail
+          
+          SYNCED=0
+          SKIPPED=0
+          
+          for app in $APPS; do
+            xml="templates/${app}.xml"
+            
+            if [ ! -f "$xml" ]; then
+              echo "::warning::Skipping ${app}: ${xml} not found"
+              continue
+            fi
+            
+            echo ""
+            echo "═══════════════════════════════════════════════════════════════"
+            echo "  Syncing: ${app}"
+            echo "═══════════════════════════════════════════════════════════════"
+            
+            # Query Docker Hub API for the most recent semver tag
+            # Filter out special tags (latest, dev, nix), keep only X.Y.Z pattern
+            latest_version=$(curl -fsSL \
+              "https://hub.docker.com/v2/repositories/${DOCKERHUB_NAMESPACE}/${app}/tags/?page_size=25" \
+              | jq -r '
+                  [.results[]
+                    | select(.name | test("^[0-9]+\\.[0-9]+\\.[0-9]+$"))
+                    | {name: .name, updated: .last_updated}]
+                  | sort_by(.updated) | reverse | .[0].name // empty
+                ')
+            
+            if [ -z "$latest_version" ]; then
+              echo "::warning::No semver tag found on Docker Hub for ${app}; skipping"
+              SKIPPED=$((SKIPPED + 1))
+              continue
+            fi
+            
+            # Current pinned version in the XML
+            current_repo=$(grep -oP '(?<=<Repository>)[^<]+(?=</Repository>)' "$xml" || echo "")
+            current_tag="${current_repo##*:}"
+            
+            echo "  Current tag: ${current_tag:-<none>}"
+            echo "  Latest tag:  ${latest_version}"
+            
+            if [ "$current_tag" = "$latest_version" ]; then
+              echo "  ✓ Already up to date"
+              SKIPPED=$((SKIPPED + 1))
+              continue
+            fi
+            
+            # Bump the XML
+            new_repo="${DOCKERHUB_NAMESPACE}/${app}:${latest_version}"
+            sed -i "s|<Repository>${current_repo}</Repository>|<Repository>${new_repo}</Repository>|" "$xml"
+            echo "  → Bumped to: ${new_repo}"
+            SYNCED=$((SYNCED + 1))
+          done
+          
+          echo ""
+          echo "═══════════════════════════════════════════════════════════════"
+          echo "  Summary: ${SYNCED} synced, ${SKIPPED} unchanged"
+          echo "═══════════════════════════════════════════════════════════════"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if git diff --quiet templates/; then
+            echo "No XML template changes to commit."
+            exit 0
+          fi
+          
+          # Build a commit message listing which apps were bumped
+          changed=$(git diff --name-only templates/)
+          apps=$(echo "$changed" | sed 's|templates/||;s|\.xml||' | tr '\n' ',' | sed 's|,$||;s|,|, |g')
+          
+          git add templates/
+          git commit -m "ci(templates): bump Docker Hub tag for ${apps}"
+          git push origin main
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "Done. Visit https://github.com/UberMetroid/unraid-templates to verify."
