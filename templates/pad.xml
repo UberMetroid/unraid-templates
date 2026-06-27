@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
   <Name>pad</Name>
-  <Repository>ubermetroid/pad:2.1.1</Repository>
+  <Repository>ubermetroid/pad:3.0.1</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/pad</Registry>
   <Shell>/bin/sh</Shell>
   <Network>bridge</Network>
