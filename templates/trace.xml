@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
   <Name>trace</Name>
-  <Repository>ubermetroid/trace:3.0.1</Repository>
+  <Repository>ubermetroid/trace:3.0.2</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/trace</Registry>
   <Shell>/bin/sh</Shell>
   <Network>bridge</Network>
