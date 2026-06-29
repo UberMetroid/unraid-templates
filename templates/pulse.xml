@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Container version="2">
+  <Name>pulse</Name>
+  <Repository>ubermetroid/pulse:3.0.0</Repository>
+  <Registry>https://hub.docker.com/r/ubermetroid/pulse</Registry>
+  <Shell>/bin/sh</Shell>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <ExtraParams>--user 99:100 --restart unless-stopped --log-opt max-size=50m</ExtraParams>
+  <Support>https://github.com/UberMetroid/pulse/issues</Support>
+  <Project>https://github.com/UberMetroid/pulse</Project>
+  <Overview>
+    Pulse is a self-hosted host metrics and system telemetry dashboard built in Rust with Yew and Axum.
+    
+    Key Features:
+    - Real-time CPU load, Memory allocation, Disk storage, and Network traffic streaming via WebSockets.
+    - Lightweight, fast, and responsive.
+    - Security locking using an access PIN.
+  </Overview>
+  <Category>Tools:Utilities;Network:Web;Status:Beta;</Category>
+  <WebUI>http://[IP]:[PORT:4406]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/icons/pulse.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/pulse.xml</TemplateURL>
+  <Requires>The container requires host system statistics query privileges (e.g. access to /proc, /sys). Note: The container runs as nobody:users (UID 99 / GID 100) out of the box.</Requires>
+  <Config Name="WebUI Port" Target="4406" Default="4406" Mode="tcp" Description="The host port mapped to the web server (default container port: 4406)." Type="Port" Display="always" Required="true" Mask="false">4406</Config>
+  <Config Name="Access PIN" Target="PIN" Default="" Description="Optional numerical PIN to lock access to the interface. (Optional, not required. Leave empty for unlocked public mode.)" Type="Variable" Display="always" Required="false" Mask="true" />
+</Container>
