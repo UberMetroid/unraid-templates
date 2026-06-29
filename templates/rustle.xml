@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
   <Name>rustle</Name>
-  <Repository>ubermetroid/rustle:0.1.18</Repository>
+  <Repository>ubermetroid/rustle:0.1.19</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/rustle</Registry>
   <Shell>/bin/sh</Shell>
   <Network>bridge</Network>
@@ -21,7 +21,7 @@
   </Overview>
   <Category>Productivity:Tools;Tools:Utilities;Game:Board;</Category>
   <WebUI>http://[IP]:[PORT:4409]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/icons/rustle.png</Icon>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/icons/rustle.png?v=0.1.19</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/rustle.xml</TemplateURL>
   <Requires>If you lock the application with a PIN, it is recommended to set a strong PIN and back up your data. Note: The container runs as nobody:users (UID 99 / GID 100) out of the box.</Requires>
   <Config Name="WebUI Port" Target="4409" Default="4409" Mode="tcp" Description="The host port mapped to the web server (default container port: 4409)." Type="Port" Display="always" Required="true" Mask="false">4409</Config>
