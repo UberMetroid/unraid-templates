@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
   <Name>todo</Name>
-  <Repository>ubermetroid/todo:3.0.14</Repository>
+  <Repository>ubermetroid/todo:3.0.19</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/todo</Registry>
   <Shell>/bin/sh</Shell>
   <Network>bridge</Network>
@@ -24,6 +24,8 @@
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/todo.xml</TemplateURL>
   <Requires>If you lock the application with a PIN, it is recommended to set a strong PIN and back up your data directory. Note: The container runs as nobody:users (UID 99 / GID 100) out of the box. Ensure the mapped host appdata folder has read/write permissions for UID 99 / GID 100.</Requires>
   <Config Name="WebUI Port" Target="4403" Default="4403" Mode="tcp" Description="The host port mapped to the web server (default container port: 4403)." Type="Port" Display="always" Required="true" Mask="false">4403</Config>
-  <Config Name="Access PIN" Target="TODO_PIN" Default="" Description="Optional numerical PIN to lock access to the interface. (Optional, not required. Leave empty for unlocked public mode.)" Type="Variable" Display="always" Required="false" Mask="true" />
+  <Config Name="Access PIN" Target="TODO_PIN" Default="1234" Description="Optional numerical PIN to lock access to the interface. (Optional, not required. Leave empty for unlocked public mode.)" Type="Variable" Display="always" Required="false" Mask="true">1234</Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/todo" Mode="rw" Description="Persistent storage for task database files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/todo</Config>
+  <Config Name="Enable Translation" Target="ENABLE_TRANSLATION" Default="true" Description="Enable multi-language translation selector." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Print" Target="ENABLE_PRINT" Default="true" Description="Enable print features." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
 </Container>

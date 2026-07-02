@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
   <Name>grid</Name>
-  <Repository>ubermetroid/grid:3.0.14</Repository>
+  <Repository>ubermetroid/grid:3.0.18</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/grid</Registry>
   <Shell>/bin/sh</Shell>
   <Network>bridge</Network>
@@ -24,6 +24,8 @@
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/grid.xml</TemplateURL>
   <Requires>If you lock the application with a PIN, it is recommended to set a strong PIN and back up your data directory. Note: The container runs as nobody:users (UID 99 / GID 100) out of the box. Ensure the mapped host appdata folder has read/write permissions for UID 99 / GID 100.</Requires>
   <Config Name="WebUI Port" Target="4405" Default="4405" Mode="tcp" Description="The host port mapped to the web server (default container port: 4405)." Type="Port" Display="always" Required="true" Mask="false">4405</Config>
-  <Config Name="Access PIN" Target="GRID_PIN" Default="" Description="Optional numerical PIN to lock access to the interface. (Optional, not required. Leave empty for unlocked public mode.)" Type="Variable" Display="always" Required="false" Mask="true" />
+  <Config Name="Access PIN" Target="GRID_PIN" Default="1234" Description="Optional numerical PIN to lock access to the interface. (Optional, not required. Leave empty for unlocked public mode.)" Type="Variable" Display="always" Required="false" Mask="true">1234</Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/grid" Mode="rw" Description="Persistent storage for project database files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/grid</Config>
+  <Config Name="Enable Translation" Target="ENABLE_TRANSLATION" Default="true" Description="Enable multi-language translation selector." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Print" Target="ENABLE_PRINT" Default="true" Description="Enable print features." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
 </Container>
