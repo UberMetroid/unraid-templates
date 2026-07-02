@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
   <Name>pulse</Name>
-  <Repository>ubermetroid/pulse:1.3.31</Repository>
+  <Repository>ubermetroid/pulse:latest</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/pulse</Registry>
   <Shell>/bin/sh</Shell>
   <Network>bridge</Network>
