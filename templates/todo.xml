@@ -26,7 +26,7 @@
   <Config Name="WebUI Port" Target="4403" Default="4403" Mode="tcp" Description="The host port mapped to the web server (default container port: 4403)." Type="Port" Display="always" Required="true" Mask="false">4403</Config>
   <Config Name="Access PIN" Target="TODO_PIN" Default="1234" Description="Optional numerical PIN to lock access to the interface. (Optional, not required. Leave empty for unlocked public mode.)" Type="Variable" Display="always" Required="false" Mask="true">1234</Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/todo" Mode="rw" Description="Persistent storage for task database files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/todo</Config>
-  <Config Name="Enable Translation" Target="ENABLE_TRANSLATION" Default="true" Description="Enable multi-language translation selector." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="Enable Themes" Target="ENABLE_THEMES" Default="true" Description="Enable multi-theme selection selector." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="Enable Print" Target="ENABLE_PRINT" Default="true" Description="Enable print features." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Translation" Target="ENABLE_TRANSLATION" Default="true" Description="Enable multi-language translation selector." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Themes" Target="ENABLE_THEMES" Default="true" Description="Enable multi-theme selection selector." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Print" Target="ENABLE_PRINT" Default="true" Description="Enable print features." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
 </Container>

@@ -26,10 +26,10 @@
   <Config Name="WebUI Port" Target="4401" Default="4401" Mode="tcp" Description="The host port mapped to the web server (default container port: 4401)." Type="Port" Display="always" Required="true" Mask="false">4401</Config>
   <Config Name="Access PIN" Target="BEAM_PIN" Default="1234" Description="Optional numerical PIN to lock access to the interface. (Optional, not required. Leave empty for unlocked public mode.)" Type="Variable" Display="always" Required="false" Mask="true">1234</Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/beam" Mode="rw" Description="Persistent storage for database and config files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/beam</Config>
-  <Config Name="Max File Size" Target="MAX_FILE_SIZE" Default="20" Description="Maximum allowed single file upload size (in GB)." Type="Variable" Display="always" Required="false" Mask="false">20</Config>
-  <Config Name="Max Storage Limit" Target="MAX_STORAGE_LIMIT_GB" Default="100" Description="Combined maximum total storage limit for all uploaded files (in GB)." Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="Retention Period Days" Target="RETENTION_PERIOD_DAYS" Default="30" Description="Number of days to store uploaded files before automatically purging them." Type="Variable" Display="always" Required="false" Mask="false">30</Config>
-  <Config Name="Enable Translation" Target="ENABLE_TRANSLATION" Default="true" Description="Enable multi-language translation selector." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="Enable Themes" Target="ENABLE_THEMES" Default="true" Description="Enable multi-theme selection selector." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="Enable Print" Target="ENABLE_PRINT" Default="true" Description="Enable print features." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Max File Size" Target="MAX_FILE_SIZE" Default="20" Description="Maximum allowed single file upload size (in GB)." Type="Variable" Display="advanced" Required="false" Mask="false">20</Config>
+  <Config Name="Max Storage Limit" Target="MAX_STORAGE_LIMIT_GB" Default="100" Description="Combined maximum total storage limit for all uploaded files (in GB)." Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Retention Period Days" Target="RETENTION_PERIOD_DAYS" Default="30" Description="Number of days to store uploaded files before automatically purging them." Type="Variable" Display="advanced" Required="false" Mask="false">30</Config>
+  <Config Name="Enable Translation" Target="ENABLE_TRANSLATION" Default="true" Description="Enable multi-language translation selector." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Themes" Target="ENABLE_THEMES" Default="true" Description="Enable multi-theme selection selector." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Print" Target="ENABLE_PRINT" Default="true" Description="Enable print features." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
 </Container>
