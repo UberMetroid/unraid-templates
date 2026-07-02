@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Container version="2">
+  <Name>snake</Name>
+  <Repository>ubermetroid/snake:3.0.0</Repository>
+  <Registry>https://hub.docker.com/r/ubermetroid/snake</Registry>
+  <Shell>/bin/sh</Shell>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <ExtraParams>--user 99:100 --restart unless-stopped --log-opt max-size=50m</ExtraParams>
+  <Support>https://github.com/UberMetroid/snake/issues</Support>
+  <Project>https://github.com/UberMetroid/snake</Project>
+  <Overview>
+    Snake is a self-hosted, lightweight traditional snake game application built in Rust with Yew and Axum.
+    
+    Key Features:
+    - Traditional arcade-style snake game loop.
+    - Optional security access locking using a PIN.
+  </Overview>
+  <Category>Productivity:Office;Tools:Utilities;</Category>
+  <WebUI>http://[IP]:[PORT:4407]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/icons/snake.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/snake.xml</TemplateURL>
+  <Requires>If you lock the application with a PIN, it is recommended to set a strong PIN and back up your data directory. Note: The container runs as nobody:users (UID 99 / GID 100) out of the box. Ensure the mapped host appdata folder has read/write permissions for UID 99 / GID 100.</Requires>
+  <Config Name="WebUI Port" Target="4407" Default="4407" Mode="tcp" Description="The host port mapped to the web server (default container port: 4407)." Type="Port" Display="always" Required="true" Mask="false">4407</Config>
+  <Config Name="Access PIN" Target="SNAKE_PIN" Default="1234" Description="Optional numerical PIN to lock access to the interface. (Optional, not required. Leave empty for unlocked public mode.)" Type="Variable" Display="always" Required="false" Mask="true">1234</Config>
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/snake" Mode="rw" Description="Persistent storage for snake database files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/snake</Config>
+  <Config Name="Enable Translation" Target="ENABLE_TRANSLATION" Default="true" Description="Enable multi-language translation selector." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Print" Target="ENABLE_PRINT" Default="true" Description="Enable print features." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+</Container>
