@@ -17,7 +17,7 @@
     - Lightweight, fast, and responsive.
     - Security locking using an access PIN.
   </Overview>
-  <Category>Tools:Utilities;Network:Web;Status:Beta;</Category>
+  <Category>Tools:Utilities;Network:Web;</Category>
   <WebUI>http://[IP]:[PORT:4406]/</WebUI>
   <Icon>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/icons/pulse.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-templates/main/templates/pulse.xml</TemplateURL>
