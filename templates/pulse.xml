@@ -6,6 +6,7 @@
   <Shell>/bin/sh</Shell>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
+  <PID>host</PID>
   <ExtraParams>--user 99:100 --restart unless-stopped --log-opt max-size=50m</ExtraParams>
   <Support>https://github.com/UberMetroid/pulse/issues</Support>
   <Project>https://github.com/UberMetroid/pulse</Project>
@@ -24,6 +25,8 @@
   <Requires>The container requires host system statistics query privileges (e.g. access to /proc, /sys). Note: The container runs as nobody:users (UID 99 / GID 100) out of the box.</Requires>
   <Config Name="WebUI Port" Target="4406" Default="4406" Mode="tcp" Description="The host port mapped to the web server (default container port: 4406)." Type="Port" Display="always" Required="true" Mask="false">4406</Config>
   <Config Name="Access PIN" Target="PIN" Default="1234" Description="Optional numerical PIN to lock access to the interface. (Optional, not required. Leave empty for unlocked public mode.)" Type="Variable" Display="always" Required="false" Mask="true">1234</Config>
+  <Config Name="Host Proc" Target="/proc" Default="/proc" Mode="ro" Description="Read-only host /proc mount for CPU and memory usage statistics." Type="Path" Display="always" Required="true" Mask="false">/proc</Config>
+  <Config Name="Host Sys" Target="/sys" Default="/sys" Mode="ro" Description="Read-only host /sys mount for network and GPU statistics." Type="Path" Display="always" Required="true" Mask="false">/sys</Config>
   <Config Name="Enable Translation" Target="ENABLE_TRANSLATION" Default="true" Description="Enable multi-language translation selector." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
   <Config Name="Enable Themes" Target="ENABLE_THEMES" Default="true" Description="Enable multi-theme selection selector." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
   <Config Name="Enable Print" Target="ENABLE_PRINT" Default="true" Description="Enable print features." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
