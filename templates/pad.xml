@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Container version="2">
   <Name>pad</Name>
-  <Repository>ubermetroid/pad:3.0.14</Repository>
+  <Repository>ubermetroid/pad:3.0.19</Repository>
   <Registry>https://hub.docker.com/r/ubermetroid/pad</Registry>
   <Shell>/bin/sh</Shell>
   <Network>bridge</Network>
@@ -25,5 +25,6 @@
   <Config Name="Access PIN" Target="PAD_PIN" Default="1234" Description="Optional numerical PIN to lock access to the interface. (Optional, not required. Leave empty for unlocked public mode.)" Type="Variable" Display="always" Required="false" Mask="true">1234</Config>
   <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/pad" Mode="rw" Description="Persistent storage for notepad database files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pad</Config>
   <Config Name="Enable Translation" Target="ENABLE_TRANSLATION" Default="true" Description="Enable multi-language translation selector." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Themes" Target="ENABLE_THEMES" Default="true" Description="Enable multi-theme selection selector." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Enable Print" Target="ENABLE_PRINT" Default="true" Description="Enable print features." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
 </Container>
